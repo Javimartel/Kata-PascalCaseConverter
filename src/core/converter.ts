@@ -7,13 +7,12 @@ export class PascalCaseConverter {
 
     convert(): string {
         return this.text
-            .split(/[ _:\-]+/)
-            .filter(Boolean)
+            .split(/[ _:-]/)
             .map(this.capitalize)
             .join('');
     }
 
     private capitalize(word: string): string {
-        return word ? word[0].toUpperCase() + word.slice(1).toLowerCase() : '';
+        return word ? word[0].toUpperCase() + word.slice(1) : '';
     }
 }
