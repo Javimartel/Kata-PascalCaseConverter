@@ -5,11 +5,15 @@ export class PascalCaseConverter {
         this.text = textToConvert;
     }
 
-    convert() {
-        const words = this.text.split(/[ _:-]/);
+    convert(): string {
+        return this.text
+            .split(/[ _:\-]+/)
+            .filter(Boolean)
+            .map(this.capitalize)
+            .join('');
+    }
 
-        return words.map((word) => {
-            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-        }).join('');
+    private capitalize(word: string): string {
+        return word ? word[0].toUpperCase() + word.slice(1).toLowerCase() : '';
     }
 }
