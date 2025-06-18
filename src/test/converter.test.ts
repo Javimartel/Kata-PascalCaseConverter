@@ -24,4 +24,12 @@ describe('PascalCaseConverter', () => {
 
         expect(result).toBe('HelloWorld');
     });
+
+    it('should convert a string with hyphen to PascalCase', () => {
+        const converter = new PascalCaseConverter('hello-world');
+
+        const result = converter.convert();
+
+        expect(result).toBe('HelloWorld');
+    });
 })
