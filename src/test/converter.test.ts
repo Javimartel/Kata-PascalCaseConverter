@@ -32,4 +32,12 @@ describe('PascalCaseConverter', () => {
 
         expect(result).toBe('HelloWorld');
     });
+
+    it('should convert a string with underscores to PascalCase', () => {
+        const converter = new PascalCaseConverter('hello_world');
+
+        const result = converter.convert();
+
+        expect(result).toBe('HelloWorld');
+    });
 })
