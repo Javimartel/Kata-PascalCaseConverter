@@ -6,7 +6,7 @@ export class PascalCaseConverter {
     }
 
     convert() {
-        const words = this.text.split(' ');
+        const words = this.text.split(/[ -]/);
 
         return words.map((word) => {
             return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
