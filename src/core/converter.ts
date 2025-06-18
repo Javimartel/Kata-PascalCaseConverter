@@ -6,6 +6,10 @@ export class PascalCaseConverter {
     }
 
     convert() {
-        return this.text.charAt(0).toUpperCase() + this.text.slice(1);
+        const words = this.text.split(' ');
+
+        return words.map((word) => {
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        }).join('');
     }
 }
