@@ -16,4 +16,12 @@ describe('PascalCaseConverter', () => {
 
         expect(result).toBe('Hello');
     });
+
+    it('should convert a multi-word string to PascalCase', () => {
+        const converter = new PascalCaseConverter('hello world');
+
+        const result = converter.convert();
+
+        expect(result).toBe('HelloWorld');
+    });
 })
