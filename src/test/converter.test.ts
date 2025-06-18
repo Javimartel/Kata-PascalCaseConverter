@@ -48,4 +48,12 @@ describe('PascalCaseConverter', () => {
 
         expect(result).toBe('HelloWorld');
     });
+
+    it('should convert a complex string to PascalCase', () => {
+        const converter = new PascalCaseConverter('hello_world-test:case');
+
+        const result = converter.convert();
+
+        expect(result).toBe('HelloWorldTestCase');
+    });
 })
