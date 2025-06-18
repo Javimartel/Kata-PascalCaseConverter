@@ -8,4 +8,12 @@ describe('PascalCaseConverter', () => {
 
         expect(result).toBe('');
     });
+
+    it('should convert a single word to PascalCase', () => {
+        const converter = new PascalCaseConverter('hello');
+
+        const result = converter.convert();
+
+        expect(result).toBe('Hello');
+    });
 })
