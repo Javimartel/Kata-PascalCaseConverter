@@ -4,4 +4,8 @@ export class PascalCaseConverter {
     constructor(textToConvert: string) {
         this.text = textToConvert;
     }
+
+    convert() {
+        return '';
+    }
 }
